@@ -24,19 +24,31 @@ The first time you import, it downloads the speech model (about 40 MB, one time 
 
 ## Using it
 
+**Quick Cut** (the blue button) does everything in one go. Pick your videos, and it puts them in the order you
+recorded them, cuts the pauses, keeps your last take of each line, removes the extra takes, and shows **Watch it**.
+If it looks right, tap **Export**. If not, fix it by hand below (undo brings removed takes back).
+
+
 - **+** imports videos from Photos or Files. Each one is auto-cut as it loads.
 - Tap a clip to select it. Drag the white handles to trim. Removed parts disappear.
 - Long-press a clip and drag it to reorder it, or drag it up or down onto the front or bottom layer.
 - Pinch the timeline to zoom. Swipe to scrub.
+- Each clip is one take. Pauses inside a take are cut out (small notches mark the cuts), but it stays one clip.
+  A pause longer than **New take after pauses of** (Cut settings) starts a new clip.
+- The bar at the top of the preview always shows what the app is working on.
+- After auto-cut, **green** clips are keeper takes and **red** clips are earlier takes of the same line.
+  **Remove red** deletes all red clips. To keep a middle take instead, select it and tap **Mark green**,
+  then select the one you don't want and tap **Mark red**.
+- The **− / +** buttons on the layer rows add or remove front and bottom layers. At least one of each always stays.
 - **Split** cuts at the playhead. **Copy to front / bottom** duplicates the clip onto a layer (muted).
 - **Cut settings** controls how aggressive silence cutting is, pause length, breathing room,
   and the retake detector.
-- **Export → Separate clips** gives you one trimmed video per imported clip, in timeline order.
-  Then tap **Save to Photos**.
+- **Export** has three options: **One video**, **Each recording** (one file per video you shot), or **Each take**.
+  The files are dated so they appear in Photos and CapCut in story order. Then tap **Save to Photos**.
 
 ## Updating
 
-Upload changed files to the repo again. The app picks up the update the next time you open it
+In the repo, click **Add file → Upload files**, drag in all the files again, and commit (they replace the old ones). The app picks up the update the next time you open it
 (sometimes it takes two launches).
 
 `source/` contains the code the app is built from. You don't need it to run the app.

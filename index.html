@@ -25,10 +25,22 @@
 
     <section id="viewport">
       <div id="stage"></div>
-      <div id="empty">
-        <div class="big">Tap <b>+</b> to import clips</div>
-        <div>Silences and repeated takes are cut automatically.</div>
+      <div id="activity" data-state="">
+        <div class="a-row"><span class="a-icon"></span><span id="a-text"></span></div>
+        <div class="a-bar"><div id="a-fill"></div></div>
       </div>
+      <div id="empty">
+        <button id="emptyQuick" class="quickbig">
+          <svg viewBox="0 0 24 24"><path d="M13 3 5 13.5h6L10 21l8-10.5h-6z" fill="currentColor"/></svg>
+          Quick Cut
+        </button>
+        <div>Pick your videos. They're put in recording order, pauses and extra takes are cut, and it's ready to watch.</div>
+        <button id="emptyImport" class="linkbtn">or import and edit manually</button>
+      </div>
+      <button id="bigplay" aria-label="Watch">
+        <svg viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg>
+        <span>Watch it</span>
+      </button>
     </section>
 
     <div id="transport">
