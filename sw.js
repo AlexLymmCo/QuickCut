@@ -1,5 +1,5 @@
 // Offline support: keeps the app shell and the speech-recognition library on the phone.
-const VERSION = 'qc-v4';
+const VERSION = 'qc-v5';
 const SHELL = ['./', 'index.html', 'app.js', 'styles.css', 'whisper-worker.js', 'manifest.webmanifest', 'icon-180.png', 'icon-512.png'];
 
 self.addEventListener('install', (e) => {

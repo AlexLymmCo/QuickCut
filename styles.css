@@ -139,3 +139,5 @@ header .title { font-weight: 600; font-size: 16px; }
 #a-fill.indef { width: 35% !important; animation: indef 1.2s ease-in-out infinite; }
 @keyframes spin { to { transform: rotate(360deg); } }
 @keyframes indef { from { transform: translateX(-100%); } to { transform: translateX(290%); } }
+
+.offscreen { position: fixed; left: -200px; top: 0; width: 1px; height: 1px; opacity: 0; }
