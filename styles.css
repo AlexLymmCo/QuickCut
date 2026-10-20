@@ -140,3 +140,8 @@ header .title { font-weight: 600; font-size: 16px; }
 
 .offscreen { position: fixed; left: -200px; top: 0; width: 1px; height: 1px; opacity: 0; }
 .log { width: 100%; height: 140px; background: #0f0f12; color: #b8b8c0; border: 1px solid #2a2a30; border-radius: 8px; font: 11px/1.4 ui-monospace, Menlo, monospace; padding: 8px; -webkit-user-select: text; user-select: text; }
+.words { line-height: 2.1; font-size: 16px; padding: 4px 0 6px; -webkit-user-select: none; }
+.w { padding: 3px 4px; border-radius: 6px; cursor: pointer; }
+.w.out { color: #6b6b73; }
+.w.flag { color: #ff8a80; }
+.w.struck { background: #ff453a; color: #fff; text-decoration: line-through; }
