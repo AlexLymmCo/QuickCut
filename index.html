@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="QuickCut">
+  <meta name="theme-color" content="#000000">
+  <title>QuickCut</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="icon-180.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app">
+    <header>
+      <button id="btnMenu" class="ghost" aria-label="Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+      <div class="title">QuickCut</div>
+      <button id="btnExport" class="export">Export</button>
+    </header>
+
+    <section id="viewport">
+      <div id="stage"></div>
+      <div id="empty">
+        <div class="big">Tap <b>+</b> to import clips</div>
+        <div>Silences and repeated takes are cut automatically.</div>
+      </div>
+    </section>
+
+    <div id="transport">
+      <span id="tc">00:00 / 00:00</span>
+      <button id="btnPlay" class="play" aria-label="Play"></button>
+      <div class="ur">
+        <button id="btnUndo" class="ghost" aria-label="Undo"></button>
+        <button id="btnRedo" class="ghost" aria-label="Redo"></button>
+      </div>
+    </div>
+
+    <div id="tlwrap"><canvas id="tl"></canvas></div>
+    <nav id="tools"></nav>
+  </div>
+
+  <input type="file" id="file" accept="video/*,.mov,.mp4,.m4v" multiple hidden>
+  <div id="sheet"><div class="card"></div></div>
+  <div id="toast"></div>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
