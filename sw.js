@@ -1,5 +1,5 @@
 // Offline support: keeps the app shell and the speech-recognition library on the phone.
-const VERSION = 'qc-v9';
+const VERSION = 'qc-v11';
 const SHELL = ['./', 'index.html', 'app.js', 'styles.css', 'whisper-worker.js', 'manifest.webmanifest', 'icon-180.png', 'icon-512.png'];
 
 self.addEventListener('install', (e) => {
@@ -35,7 +35,7 @@ self.addEventListener('fetch', (e) => {
   }
 
   // Versioned libraries from jsDelivr never change: cache forever.
-  if (url.hostname === 'cdn.jsdelivr.net') {
+  if (url.hostname === 'cdn.jsdelivr.net' || url.hostname === 'storage.googleapis.com') {
     e.respondWith(
       caches.open('qc-cdn').then(async (cache) => {
         const hit = await cache.match(req);
